@@ -1,0 +1,8 @@
+<div class="row">
+  <% @pokemons.each do |pokemon| %>
+    <div class="col-md-3 text-center pokemon-container">
+      <%= image_tag(pokemon.image_url, class: "pokemon-image") %>
+      <h3><%= pokemon.name %></h3>
+    </div>
+  <% end %>
+</div>
