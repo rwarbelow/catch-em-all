@@ -1,4 +1,4 @@
 class Game < ActiveRecord::Base
-  has_many :captures
-  has_many :pokemons, through: :captures
+  has_many :game_pokemons
+  has_many :pokemons, through: :game_pokemons
 end

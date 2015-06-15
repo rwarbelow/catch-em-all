@@ -13,15 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20150423205851) do
 
-  create_table "captures", force: :cascade do |t|
+  create_table "game_pokemons", force: :cascade do |t|
     t.integer  "game_id"
     t.integer  "pokemon_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "captures", ["game_id"], name: "index_captures_on_game_id"
-  add_index "captures", ["pokemon_id"], name: "index_captures_on_pokemon_id"
+  add_index "game_pokemons", ["game_id"], name: "index_game_pokemons_on_game_id"
+  add_index "game_pokemons", ["pokemon_id"], name: "index_game_pokemons_on_pokemon_id"
 
   create_table "games", force: :cascade do |t|
     t.string   "user_name"
