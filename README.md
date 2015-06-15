@@ -95,6 +95,7 @@ end
 
 ```
 
+Now we need a backpack. `touch app/models/backpack.rb`, then build out the method to add pokemon. 
 
 ```ruby
 class Backpack
@@ -184,7 +185,7 @@ class GamesController < ApplicationController
 
     if game.save
       session[:backpack] = nil
-      flash[:notice] = "Your game is finished! You captured #{game.pokemons.count} pokemon."
+      flash[:notice] = "Your game is finished! You captured #{game.pokemons.count} species of pokemon."
       redirect_to root_path
     else
       # implement if you have validations
