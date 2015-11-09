@@ -3,6 +3,7 @@
     <div class="col-md-3 text-center pokemon-container">
       <%= image_tag(pokemon.image_url, class: "pokemon-image") %>
       <h3><%= pokemon.name %></h3>
+      <%= button_to "Capture", backpack_pokemons_path(pokemon_id: pokemon.id) %>
     </div>
   <% end %>
 </div>

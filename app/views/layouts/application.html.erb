@@ -14,6 +14,13 @@
   <div class="text-center">
     <%= image_tag('banner.png', class: 'banner') %>
   </div>
+  Backpack: <%= @backpack.total %>
+  <%#= flash[:notice] %>
+
+  <% flash.each do |type, message| %>
+    <p><%= content_tag(:div, message) %></p>
+  <% end %>
+
 <%= yield %>
 
 </body>
